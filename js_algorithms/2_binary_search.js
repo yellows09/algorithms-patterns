@@ -25,3 +25,18 @@ function binarySearch(array, item) {
 }
 
 console.log(binarySearch(array,4))
+
+function binarySearchR(array, item, start, end) {
+    let middle = Math.floor((start + end) / 2)
+    if (item === array[middle]) {
+        return middle;
+    }
+    if (item < array[middle]) {
+        return binary_search_r(array, item, start, middle - 1)
+    } if (item > array[middle]) {
+        return binary_search_r(array, item, middle + 1, end)
+    }else{
+        return 'not found or array is not sort';
+    }
+}
+
